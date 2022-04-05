@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Buddy</title>
+
+    <base href="/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8a135f850.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/prism.css">
+
+    
+</head>
+<body>
+    <div class="extra_class",style="display:none"></div>
+    <section class="chat_area">
+        <div class="header">
+            <h3>Chat Buddies</h3>
+        </div>
+        <div class="messages">
+            <div class="recieved_msg">
+                <h4>Admin</h4>
+                <p>Welcome!!</p>
+            </div>
+        </div>
+        <div class="emojis">
+            <a href="#" onclick="getEmoji(this)">&#128540;</a>
+        </div>
+        <div class="box">
+        <div class="icons">
+            <a href="#" onclick="fun1(this)" title="Bold"><i class="fa fa-bold" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun2(this)" title="Italic"><i class="fa fa-italic" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun3(this)" title="Strike through"><i class="fa fa-strikethrough" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun4(this)" title="Link"><i class="fa fa-link" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun5(this)" title="Bullet list"><i class="fa fa-list" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun6(this)" title="Numbered list"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun7(this)" title="Blockquote"><i class="fa fa-align-left" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun8(this)" title="code"><i class="fa fa-code" aria-hidden="true"></i></a>
+            <a href="#" onclick="fun9(this)" title="code file"><i class="fa fa-file-code-o" aria-hidden="true"></i></a>
+        </div>
+        <div>
+            <textarea class="textarea" spellcheck="false" oninput="coder(this)" onfocus="hideemoji()" id="text" placeholder="Type Here..."></textarea>
+            <pre class="pre" style="display:none">
+                <code class="language-html"></code>
+            </pre>
+        </div>
+        <div class="icons">
+            <a href="#" onclick="fileSend()" title="Send file"><i class="fa fa-plus" aria-hidden="true"></i><input type="file" id="files" onchange="fileSelected(this)" style="display: none;"></a>
+            <a href="#" onclick="showemoji(this)" title="emoji"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa" aria-hidden="true" title="mention">@</i></a>
+            <a href="#"  style="margin-left: auto;" onclick="send()" title="send"><i class="fa fa-send" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    </section>
+    <!--script tags-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+    <script src="/prism.js"></script>
+    
+  
+</body>
+</html>

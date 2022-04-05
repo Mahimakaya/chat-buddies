@@ -1,0 +1,147 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    background: #aaa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_area{
+    width: 80%;
+    max-width: 90%;
+    background: #2C2F33; 
+    color: white;
+    box-shadow: 10px 0 10px 5;
+}
+.header h3{
+    font-family: 'Architects Daughter', cursive;
+}
+.header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #23272A; 
+}
+
+.messages{
+    height: 60vh;
+    display: flex;
+    padding: 15px;
+    font-size: 14px;
+    flex-direction: column; /* so messages appear one by one*/
+    overflow-y: auto;       /* */
+}
+.messages h4{
+    margin-bottom: 3px;
+}
+.recieved_msg p{
+    background: rgba(0,0,0,0.25);
+    border-radius: 7px;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.sent_msg p{
+    background: rgba(255,255,255,0.8);
+    border-radius: 7px;
+    padding: 5px;
+    color: black;
+    white-space: pre-wrap;
+}
+.sent_msg{
+    max-width: 46%;
+    margin-left: auto;
+    width: fit-content;
+    padding-bottom: 10px;
+    word-break: break-word;
+}
+.recieved_msg{
+    margin-right: 0;
+    max-width: 46%;
+    width: fit-content;
+    padding-bottom: 10px;
+    word-break: break-word;
+}
+.textarea{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none;
+    color: white;
+    background: #23272A;
+}
+.fa{
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    border: 0.5px solid #aaaa;
+}
+.icons{
+    display: flex;
+    justify-content: flex-start;
+}
+/* box holds all the icons and textarea*/
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    margin: 4px;
+    border-radius: 5px;
+    border: 0.5px solid #aaaa;
+}
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+/*scroll bar backfround*/
+  ::-webkit-scrollbar-track {
+    background: #23272A; 
+  }
+   
+  /* mover in scroll bar */
+  ::-webkit-scrollbar-thumb {
+    background: #444950; 
+  }
+  
+  /* on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaaa; 
+  }
+  .extra_class{
+    border:0;
+    color: red;
+  }
+  .users{
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+  .emojis{
+    background: #aaaa;
+    padding: 10px;
+    position: absolute;
+    display: none;
+    width: inherit;
+    flex-wrap: wrap;
+    height: 20vh;
+    overflow: auto;
+    top: 54%;
+  }
+
+  .emojis a{
+      text-decoration: none;
+      font-size:24px
+
+  }
+  .image{
+      width: 100%;
+      height: 250px;
+  }
